@@ -2,6 +2,7 @@ import os
 import cv2
 import time
 import imutils
+import streamlit as st
 
 # Constants
 CASCADE_FILE = 'haarcascade_frontalface_default.xml'
@@ -13,8 +14,8 @@ RESIZE_WIDTH = 400
 detector = cv2.CascadeClassifier(CASCADE_FILE)
 
 # Input user details
-name = input("Enter your Name: ").strip()
-role_number = input("Enter your Roll Number: ").strip()
+name = st.text_input("Enter your Name:")
+role_number = st.text_input("Enter your Roll Number:")
 
 # Create a folder for the dataset if it doesn't exist
 output_path = os.path.join(DATASET_DIR, name)
