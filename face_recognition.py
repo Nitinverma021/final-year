@@ -8,6 +8,7 @@ from datetime import datetime
 import pandas as pd
 import collections
 from collections.abc import Iterable
+import time
 
 def flatten(lis):
     for item in lis:
