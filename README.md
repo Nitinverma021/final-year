@@ -57,3 +57,32 @@ detection accuracy and system reliability.
 
 
 # final
+
+## Deployment Instructions
+
+### Local Development
+1. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. Run the Streamlit app:
+```bash
+streamlit run app1.py
+```
+
+### Deploying to Streamlit Cloud
+1. Push your code to GitHub
+2. Go to [share.streamlit.io](https://share.streamlit.io)
+3. Sign in with your GitHub account
+4. Click "New app"
+5. Select your repository, branch, and main file (app1.py)
+6. Click "Deploy"
+
+The app will be deployed and you'll get a public URL to share with others.
