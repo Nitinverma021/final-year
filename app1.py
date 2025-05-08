@@ -92,16 +92,11 @@ with tab2:
     att_transformer = AttendanceTransformer()
     st.info("Click Start and show your face to the webcam.")
     webrtc_ctx2 = webrtc_streamer(key="attendance", video_transformer_factory=lambda: att_transformer)
+    st.write(f"Frames captured: {att_transformer.frame_count}")
     if st.button("Process Attendance"):
         st.write("Processing captured frames for attendance...")
-        # Save the last frame and run recognition (as a demo, you can use the last frame)
         if att_transformer.frames:
             last_frame = att_transformer.frames[-1]
-            # Save the frame temporarily
-            temp_path = "temp_attendance.jpg"
-            cv2.imwrite(temp_path, last_frame)
-            # You can now modify mark_attendance to accept an image path or image array
-            # For now, just show the image
             st.image(last_frame, channels="BGR")
             st.warning("You need to adapt mark_attendance to process this frame.")
         else:
