@@ -1,7 +1,7 @@
-opencv-python
-pandas
-numpy
-scikit-learn
-imutils
-requests
-streamlit
+opencv-python-headless==4.8.1.78
+pandas==2.2.0
+numpy==1.26.3
+scikit-learn==1.4.0
+imutils==0.5.4
+requests==2.31.0
+streamlit==1.31.1
